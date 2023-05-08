@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*border: 1px solid red;*/
+}
+
+body{
+    background-color: #1e1e1e;
+    overflow: hidden;
+}
+
+.container{
+    width: 900px;
+    height: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 60vh 30vh;
+    gap: 0.75vh;
+}
+
+.container > div{
+    margin: 4vh;
+    width: 100%;
+    height: 100%;
+}
+
+.img{
+    width: 100%;
+    height: 100%;
+}
+
+.img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5rem;
+    object-fit: cover;
+}
+
+.kenji{
+    grid-column: 1/3;
+    grid-row: 1/2;
+}
+
+.satomi{
+    grid-column: 3/5;
+    grid-row: 1/2;
+} 
+
+
+@media (max-width: 568px){
+    body{
+        background-color: #00001e;
+    }  
+
+    .container{
+        width: auto;
+        grid-template-columns: repeat(1, auto);
+        grid-template-rows: repeat(6, 1fr);
+        grid-template-areas: 
+            "kenji"
+            "satomi"
+            "risa"
+            "yuka"
+            "ayaka"
+            "yoshimi"
+        ;
+    }
+
+    .kenji{
+        grid-area: kenji;
+
+    }
+
+    .satomi{
+        grid-area: satomi;
+    }
+
+    .risa{
+        grid-area: risa;
+    }
+
+    .yuka{
+        grid-area: yuka;
+    }
+
+    .ayaka{
+        grid-area: ayaka;
+    }
+
+    .yoshimi{
+        grid-area: yoshimi;
+    }
+}
