@@ -32,23 +32,66 @@ body{
     height: 85%;
     width: 30%;
     text-align: center;
+    position: relative;
+    left: -50rem;
+    animation: slide-from-left 1.5s ease-in-out forwards;
+}
+
+@keyframes slide-from-left{
+    80%{
+        left: 0.5rem;
+    }
+    100%{
+        left: 0rem;
+    }
 }
 
 .movie-poster{
     height: 100%;
     border-radius: 1rem;
     margin-right: 2rem;
+    cursor: pointer;
+}
+
+.movie-poster:hover{
+    transform: scale(1.025);
+    box-shadow: 1rem 1rem 1rem -0.5rem #090929;
+    transition: 0.5s;
 }
 
 .movie-info-container{
     height: 100%;
     width: 70%;
     padding-top: 2rem;
+    overflow: hidden;
+}
+
+.movie-info-container > *:not(.movie-info-title){
+    opacity: 0;
+    animation: fade-in 1s ease-in-out forwards;
+    animation-delay: 1s;
+}
+
+@keyframes fade-in{
+    100%{
+        opacity: 1;
+    }
 }
 
 .movie-info-title{
     margin-top: 2rem;
     text-transform: capitalize;
+    transform: translateY(-15rem);
+    animation: slide-from-top 1.5s ease-in-out forwards;
+}
+
+@keyframes slide-from-top{
+    80%{
+        transform: translateY(0.25rem);
+    }
+    100%{
+        transform: translateY(0rem);
+    }
 }
 
 .movie-genres{
@@ -96,6 +139,27 @@ body{
     justify-content: center;
     align-items: center;
     padding: 1rem;
+    transition: all 0.25s;
+}
+
+.movie-info-actions ul li a:hover{
+    transform: scale(1.25);
+}
+
+#m-a1:hover{
+    color: #cc0000;
+}
+
+#m-a2:hover{
+    color: #683a14;
+}
+
+#m-a3:hover{
+    color: #cccc00;
+}
+
+.movie-info-actions ul li a:active{
+    transform: scale(1.1);
 }
 
 .movie-info-quote{
@@ -133,6 +197,15 @@ footer{
     margin-top: 2rem;
     text-align: center;
     color: #808080;
+    opacity: 0;
+    animation: fade-in-footer 1s ease-in-out forwards;
+    animation-delay: 1.25s;
+}
+
+@keyframes fade-in-footer{
+    100%{
+        opacity: 1;
+    }
 }
 
 footer ul li{
