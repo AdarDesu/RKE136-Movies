@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&family=Rubik+Vinyl&display=swap');
 
 *{
     margin: 0;
@@ -37,7 +37,7 @@ body{
     background: 
         linear-gradient(to right, #20204a calc((50vw - 170px) - 340px), 
         #20204ad6 40%, #20204ad6 100%),
-        url("../images/img2.jpg");
+        url("../img/img2.jpg");
     background-size: cover;
     display: flex;
     align-items: center;
@@ -195,7 +195,6 @@ body{
     width: 55%;
 }
 
-
 .movie-info-people{
     margin-top: 2rem;
     list-style: none;
@@ -209,50 +208,9 @@ body{
     font-weight: 700;
 }
 
-.modal{
-    display: none;
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    background-color: #0f0f0faa;
-    z-index: 2;
-    top: 0;
-    left: 0;
-    text-align: center;
-    animation: fade-in 0.5s;
-}
-
-@keyframes fade-in {
-    0%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
-    }
-    
-}
-
-.modal-content{
-    background-color: #17234baa;
-    margin: 5% auto;
-    padding: 5rem;
-    width: 1000px;
-    height: 575px;
-    border-radius: 1rem;
-    animation: zoom-in 0.5s;
-}
-
-@keyframes zoom-in {
-    0%{
-        transform: scale(0);
-    }
-    100%{
-        transform: scale(1);
-    }
-    
-}
-
 .close-btn{
+    margin-top: -3.5rem;
+    margin-right: -2.5rem;
     float: right;
     cursor: pointer;
     font-size: 2rem;
@@ -265,9 +223,9 @@ body{
 }
 
 .movie-poster-modal{
-    width: 250px;
-    border-radius: 0.5rem;
-    margin: 0.75rem;
+    height: 45vh;
+    border-radius: 1rem;
+    margin: 0.75% 3.75%;
 }
 
 footer{
